@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.example.food.business.FoodBusiness;
 import com.example.food.model.IdResponse;
+import com.example.food.model.RegisterRequest;
 import com.example.food.model.UserRequest;
 import com.example.food.model.UserResponse;
 import com.example.food.response.BaseResponse;
@@ -78,6 +79,11 @@ public class FootController {
     public BaseResponse<IdResponse> CreateUser(@Valid @RequestBody UserRequest input){
         return BaseResponse.success("create user success",foodBusiness.CreateUser(input));
     }
+
+//    @PostMapping("register")
+//	    public BaseResponse<IdResponse> Register(@RequestBody RegisterRequest input){
+//            return BaseResponse.success("register user success",foodBusiness.Register(input));
+//    }
 
 
 	
