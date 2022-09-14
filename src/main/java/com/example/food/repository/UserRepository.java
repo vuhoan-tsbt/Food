@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface UserRepository extends  JpaRepository<User, String>{
@@ -15,6 +16,7 @@ public interface UserRepository extends  JpaRepository<User, String>{
 
     @Query(value = "select count(*) from  food.user",nativeQuery = true)
     Long countUser();
+
 
 //    @Query("insert into user (name)  values (name)")
 //    User save(String name);
